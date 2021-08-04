@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="togler-icon">
+      <a href="#"class="menuline"onclick="Openbar()"><img id="open" src="Assets/hamburger-icon.png"alt="">
+    </div>
+    <div class="sidebar" id="mySidebar" style="display:none">
+      <!-- <span class = "menuline"onclick="Openbar()"><img src="hamburger-icon.png"alt=""></span> -->
+      <a href="javascript:void(0)"class="closebtn"onclick="Closebar()"><img src="Assets/close-btn.png"alt=""></a>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+      <a href="#">Home</a>
+      <a href="#">Contect</a>
+      <a href="#">About</a>
+    </div>
+    <div class="container">
+      <div class="left">
+
+      </div>
+      <div class="right">
+        <div class="formBox">
+          <h1>Registeration Info</h1>
+          <form>
+            <input type="text" name="" value=""placeholder="Name" required><br>
+            <input type="text" name="" value=""placeholder="Email"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+            <input type="text" name="" value=""placeholder="phone"pattern="[0-9]{10}" required><br>
+            <input placeholder="Birthdate" class="textbox-n" type="text" onfocus="(this.type='date')" id="date"><br>
+            <select name="cars" id="cars" required>
+                <option value="">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Saab</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="password" name="" value=""placeholder="Password" pattern="(?=.*\d)(?.=*[a-z])(?=.*[A-Z]).{8,}"><br>
+            <input type="password" name="" value=""placeholder="Confirm Password" pattern="(?=.*\d)(?.=*[a-z])(?=.*[A-Z]).{8,}"><br>
+            <input class="button-add" type="submit" name="Submit" value="Submit">
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+
+
+    function Openbar() {
+      document.getElementById("mySidebar").style.display = "block";
+      }
+      function Closebar() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+      document.getElementById("open").addEventListener("click", function (e) {
+        e.stopPropagation();
+        Openbar();
+      });
+
+      document.onclick = call;
+
+      function call(){
+        Closebar();
+      }
+    </script>
+  </body>
+</html>
